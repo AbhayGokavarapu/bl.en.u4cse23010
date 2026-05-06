@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+!notification_app_be/.env.example
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+build/
+register.json

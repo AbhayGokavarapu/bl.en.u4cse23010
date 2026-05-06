@@ -1,0 +1,34 @@
+{
+  "name": "bl.en.u4cse23010",
+  "version": "1.0.0",
+  "main": "notification_app_be/src/server.js",
+  "scripts": {
+    "start": "npm run build:fe && node notification_app_be/src/server.js",
+    "dev": "nodemon notification_app_be/src/server.js",
+    "build:fe": "vite build --config notification_app_fe/vite.config.js",
+    "preview": "npm run build:fe && node notification_app_be/src/server.js",
+    "priority-inbox": "node notification_app_be/src/stage6/priority-inbox-cli.js 10",
+    "check": "node --check notification_app_be/src/server.js && node --check notification_app_be/src/routes/notifications.routes.js && node --check notification_app_be/src/routes/external-notifications.routes.js && node --check notification_app_be/src/routes/priority.routes.js && node --check notification_app_be/src/repositories/notifications.repository.js && node --check notification_app_be/src/services/notification-events.js && node --check notification_app_be/src/services/affordmed-api.js && node --check notification_app_be/src/services/priority-inbox.js && node --check notification_app_be/src/stage6/priority-inbox-cli.js && node --check notification_app_be/src/config/db.js && node --check logging_middleware/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^9.0.0",
+    "@mui/material": "^9.0.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14",
+    "pg": "^8.20.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
+    "vite": "^8.0.10"
+  }
+}
